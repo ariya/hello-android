@@ -1,0 +1,10 @@
+pool:
+  vmImage: 'macOS 10.13'
+
+steps:
+- task: Gradle@2
+  inputs:
+    workingDirectory: ''
+    gradleWrapperFile: 'gradlew'
+    publishJUnitResults: false
+    tasks: 'assembleDebug'
