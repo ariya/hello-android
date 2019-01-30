@@ -9,6 +9,13 @@ steps:
     publishJUnitResults: false
     tasks: 'assembleDebug'
 
+- task: Gradle@2
+  inputs:
+    workingDirectory: ''
+    gradleWrapperFile: 'gradlew'
+    publishJUnitResults: false
+    tasks: 'assembleRelease'
+
 - task: CopyFiles@2
   inputs:
     contents: '**/*.apk'
